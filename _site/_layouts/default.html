@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>{% for stylesheet in site.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" />{% endfor %}{% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" />{% endfor %}
+    {% asset net-armageddon.css !type %}
+
+    <meta charset="utf-8" />
+    <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}" />
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />{% if page.style %}
+
+    <style>
+{{ page.style }}    </style>{% endif %}
+
+    <title>{% if page.title %}{{ page.title }} – {{ site.title }}{% else %}{{ site.title }} – {{ site.tagline }}{% endif %}</title>
+  </head>
+
+  <body class="no-js">
+    <a class="sr-only-focusable" href="#main">Skip to main content.</a>
+
+    <div id="page">
+      <header id="header">
+        <div class="container">
+          <a href="/">
+            {% asset netea-logo.png alt='{{ site.title }}: {{ site.tagline }}' %}
+          </a>
+        </div>
+      </header>
+
+      <nav id="nav">
+        <div class="container">
+          <ul>
+            <li><a href="/rules.html">Rules</a></li>
+            <li><a href="/army-lists.html">Army Lists</a></li>
+            <li><a href="/fan-supplements.html">Fan Supplements</a></li>
+            <li><a href="/game-aids.html">Game Aids</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main id="main">
+        <div class="container">
+{{ content }}
+        </div>
+      </main>
+
+      <footer id="footer">
+        <div class="container">
+          <a class="sr-only-focusable" href="#main">Go back to main content.</a>
+
+          <div>This web site is completely unofficial and in no way endorsed by Games Workshop Limited.</div>
+
+          <a href="legal-disclaimer-and-trademark-list.html">Legal Disclaimer and Trademark List</a>
+        </div>
+      </footer>
+    </div>
+{% for script in site.scripts %}
+    <script src="{{ script }}"></script>{% endfor %}{% for script in page.scripts %}
+    <script src="{{ script }}"></script>{% endfor %}
+    {% asset net-armageddon.js !type %}{% if page.script %}
+
+    <script>
+{{ page.script }}    </script>{% endif %}
+  </body>
+</html>

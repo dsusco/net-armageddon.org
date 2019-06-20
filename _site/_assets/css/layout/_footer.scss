@@ -1,0 +1,10 @@
+#footer {
+  @include _(1.2rem);
+
+  border-top: .1rem solid $_color_light;
+  text-align: center;
+
+  > .container {
+    padding: ($_ / 2) 1em;
+  }
+}

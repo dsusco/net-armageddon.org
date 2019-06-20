@@ -1,0 +1,51 @@
+author: NetERC
+description:
+scripts:
+stylesheets:
+tagline: Epic Armageddon by and for the community
+title: NetEA
+
+# Where things are
+source: ./_site
+destination: ./public_html
+collections:
+  posts:
+    permalink: news/:year/:month/:title:output_ext
+
+# Plugins
+plugins:
+  - jekyll-assets
+
+# Outputting
+timezone: America/New_York
+
+# defaults
+defaults:
+  -
+    values:
+      layout: page
+  -
+    scope:
+      type: posts
+    values:
+      author: NetERC
+      layout: post
+  -
+    scope:
+      path: news
+      type: pages
+    values:
+      breadcrumb_template: '%{date}'
+      description_template: 'NetEA %{full_date} news posts.'
+      heading_template: 'NetEA %{full_date} News'
+      paginate: 5
+      title_template: '%{full_date} News'
+  -
+    scope:
+      path: news/tags
+      type: pages
+    values:
+      breadcrumb_template: '%{tag}'
+      description_template: 'NetEA %{tag} news posts.'
+      heading_template: 'NetEA %{tag} News'
+      title_template: '%{tag} News'

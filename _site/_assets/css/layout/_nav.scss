@@ -1,0 +1,37 @@
+#nav {
+  @include _(1.4rem);
+
+  background: asset_url('nav-background.png');
+  background-size: auto 100%;
+  border-radius: .25em;
+  min-height: 3.5rem;
+
+  > .container {
+    padding: 0 1em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+  }
+
+  a {
+    color: $_color_white;
+    display: inline-block;
+    font-weight: bold;
+    padding: .3rem 2em;
+    margin-top: .1rem;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      background: rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+    }
+  }
+}

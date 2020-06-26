@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll', '~> 3.8.7'
-gem 'activesupport', '~> 5.2.3'
+gem 'activesupport', '~> 5.2.4'
 gem 'jekyll-assets', '~> 3.0.12'
 gem 'sprockets', '~> 3.7.2'
 gem 'uglifier', '~> 4.2.0'

@@ -1,0 +1,6 @@
+---
+---
+//= import baseline.js
+
+$(function () {
+});

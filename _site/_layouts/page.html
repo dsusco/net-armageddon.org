@@ -1,6 +1,42 @@
 ---
 layout: default
 ---
-<h1>{% heading %}</h1>
+    <div id="page">
+      <a class="_sr_only_focusable" href="#main">Skip to main content.</a>
+
+      <header id="header">
+        <div class="container">
+          <a href="/"><img alt="{{ site.title }} – {{ site.tagline }}" src="assets/images/netea-logo.png"></a>
+        </div>
+      </header>
+
+      <nav id="nav">
+        <div class="container">
+          <ul>
+            <li><a href="/rules.html">Rules</a></li>
+            <li><a href="/army-lists.html">Army Lists</a></li>
+            <li><a href="/fan-supplements.html">Fan Supplements</a></li>
+            <li><a href="/game-aids.html">Game Aids</a></li>
+            <li><a href="https://www.tacticalwargames.net/taccmd/" target="_blank">Forum</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main id="main">
+        <div class="container">
+          <h1>{% heading %}</h1>
 
 {{ content }}
+        </div>
+      </main>
+
+      <footer id="footer">
+        <div class="container">
+          <a class="_sr_only_focusable" href="#main">Go back to main content.</a>
+
+          <div>This web site is completely unofficial and in no way endorsed by Games Workshop Limited.</div>
+
+          <a href="legal-disclaimer-and-trademark-list.html">Legal Disclaimer and Trademark List</a>
+        </div>
+      </footer>
+    </div>

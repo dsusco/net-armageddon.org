@@ -1,7 +1,9 @@
-author: NetERC
-description:
 scripts:
+  - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js
+  - /assets/js/net-armageddon.js
 stylesheets:
+  - /assets/css/net-armageddon.css
+author: NetERC
 tagline: Epic Armageddon by and for the community
 title: NetEA
 
@@ -12,10 +14,6 @@ collections:
   posts:
     permalink: news/:year/:month/:title:output_ext
 
-# Plugins
-plugins:
-  - jekyll-assets
-
 # Outputting
 timezone: America/New_York
 
@@ -24,6 +22,11 @@ defaults:
   -
     values:
       layout: page
+  -
+    scope:
+      path: assets
+    values:
+      layout: none
   -
     scope:
       type: posts
@@ -49,3 +52,7 @@ defaults:
       description_template: 'NetEA %{tag} news posts.'
       heading_template: 'NetEA %{tag} News'
       title_template: '%{tag} News'
+
+# Theme
+theme: baseline
+

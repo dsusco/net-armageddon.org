@@ -1,13 +1,9 @@
-#ruby=2.7.1
-#ruby-gemset=net-armageddon.org
-source 'https://rubygems.org'
+#ruby=3.4.7
+#ruby-gemset=jekyll
+source "https://rubygems.org"
 
-gem 'jekyll', '~> 3.8.7'
-gem 'activesupport', '~> 5.2.3'
-gem 'jekyll-assets', '~> 3.0.12'
-gem 'sprockets', '~> 3.7.2'
-gem 'uglifier', '~> 4.2.0'
+gem "jekyll", "~> 4.4.1"
 
 group :jekyll_plugins do
-  gem 'baseline-scss', '~> 0.2.19', :git => 'git@github.com:dsusco/baseline-scss.git'
+  gem 'baseline', '~> 0.2.2', :git => 'git@github.com:dsusco/baseline.git'
 end

@@ -1,0 +1,13 @@
+@use 'baseline-scss/mixins' as _;
+
+#footer {
+  border-top: .1rem solid var(--gray_400);
+  font-size: 1.2rem;
+  line-height: 2;
+  padding: var(--_) 1em;
+  text-align: center;
+
+  > .container {
+    @include _.centered_container();
+  }
+}

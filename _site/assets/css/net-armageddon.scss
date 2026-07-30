@@ -1,0 +1,33 @@
+---
+---
+$breakpoint_small:   769px;
+$breakpoint_medium:  993px;
+$breakpoint_large:  1281px;
+
+@use 'baseline-theme';
+@use 'layout/' as layout;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --font_family_sans: 'Roboto', sans-serif;
+  --font_family_serif: 'Roboto Slab', serif;
+  --font_family_mono: 'Roboto Mono', monospace;
+
+  --container_padding_inline: 1.6rem;
+  --centered_container_max_width: calc(72rem + 2 * var(--container_padding_inline));
+
+  --link_color: #058;
+
+  @media screen and (min-width: $breakpoint_small) {
+    --centered_container_max_width: calc(96rem + 2 * var(--container_padding_inline));
+  }
+
+  @media screen and (min-width: $breakpoint_medium) {
+    --centered_container_max_width: calc(120rem + 2 * var(--container_padding_inline));
+  }
+
+  @media screen and (min-width: $breakpoint_large) {
+    --centered_container_max_width: calc(144rem + 2 * var(--container_padding_inline));
+  }
+}

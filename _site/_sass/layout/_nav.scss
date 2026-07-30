@@ -1,0 +1,40 @@
+@use 'baseline-scss/mixins' as _;
+
+#nav {
+  --link_color: var(--white);
+  --link_text_decoration: none;
+
+  background: url('../images/nav-background.png') left top / auto 100%;
+  font-size: 1.4rem;
+  line-height: calc(35/14);
+  min-height: 3.5rem;
+  text-align: center;
+
+  > .container {
+    @include _.centered_container();
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    font-size: inherit;
+    font-weight: bold;
+    line-height: inherit;
+    padding-inline: 3rem;
+    text-transform: uppercase;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: rgba(0, 0, 0, 0.25);
+    }
+  }
+}

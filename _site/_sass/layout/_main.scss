@@ -1,0 +1,9 @@
+@use 'baseline-scss/mixins' as _;
+
+#main {
+  padding: var(--_) 1em;
+
+  > .container {
+    @include _.centered_container();
+  }
+}
